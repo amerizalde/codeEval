@@ -4,7 +4,7 @@ def main(filename):
     with open(filename) as txt:
         for line in txt:
             # create list
-            output = line.split(" ")
+            output = line.split()
             # reverse list
             output.reverse()
             # join and print
