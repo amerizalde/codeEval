@@ -1,4 +1,3 @@
-import debug_print
 import random
 from sys import argv
 
@@ -30,7 +29,7 @@ def play(line):
     assert type(line) == list, "Error, parse() expected a list, received {}".format(type(line))
     output = []
     a, b, N = int(line[0]), int(line[1]), int(line[2])
-    for i in xrange(1, N):
+    for i in xrange(1, N + 1):  # shift over 1 to ignore 0
         if i % a == 0 and i % b == 0:
             output.append("FB")
         elif i % a == 0:
